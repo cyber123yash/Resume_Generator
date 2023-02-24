@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8"/>
+        <metahttp-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="style.css"/>
+
+        <title> Resume Builder Web Application </title>
+
+    </head>
+    <body>
+     <div class="container" id="cv-form">
+        <h1 class="text-center my-4">Resume Generator</h1>
+        <p class="text-center my-4">By cyberyash </p>
+        <div class="row">
+        <div class="col-md-6">
+            <h3>Personal Information</h1>
+                <div class="form-group">
+                    <label for="contactField">Your Name</label>
+                    <input type="text" id="nameField" placeholder="Enter here" class="form-control" />
+                </div>
+
+                <div class="form-group mt-2">
+                    
+                    <label for="addressField">Your Address</label>
+                    <textarea                     
+                    
+                    id="addressField" placeholder="Enter here" class="form-control" rows="5"
+
+                    ></textarea>
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="ContactField"> Contact</label>
+                    <input type="text" id="contactField" placeholder="Enter here" class="form-control" rows="5"/>
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="fbField"> Facebook </label>
+                    <input type="text" id="fbField" placeholder="Enter here" class="form-control" rows="5"/>
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="instaField">Instagram</label>
+                    <input type="text" id="instaField" placeholder="Enter here" class="form-control" rows="5"/>
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="linkedField"> Linkdin</label>
+                    <input type="text" id="linkedField" placeholder="Enter here" class="form-control" rows="5"/>
+                </div>
+
+        </div>
+
+        <div class="col-md-6"> <br> <br>
+            <h3>Profetional Information</h1> 
+
+                <div class="form-group mt-2">
+                    
+                    <label for="objectiveField">Objective</label>
+                    <textarea                     
+                    
+                    id="objectiveField" placeholder="Enter here" class="form-control weField" rows="4"
+
+                    ></textarea>
+                </div>
+
+                <div class="form-group mt-2" id="we">
+                    <label for="WorkExperienceField"> Work Experience</label>
+                    <textarea
+                     placeholder="Enter here" class="form-control weField" rows="3"
+                    ></textarea>
+
+                    <div class="container text-center mt-2" id="weAddButton">
+                        <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+
+                    <div class="form-group mt-2" id="aq">
+                        <label for=""> Academic Qualification</label>
+                        <textarea
+                          placeholder="Enter here" class="form-control eqField" rows="3"
+                        ></textarea>
+    
+                        <div class="container text-center mt-2" id="aqAddButton">
+                            <button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                </div>
+
+        </div>
+        </div>
+        </div>
+
+        <div class="container text-center mt-3">
+            <button onclick="generateCV()"class="btn btn-primary btn-lg"> Generate CV </button>
+        </div>
+
+         <div class="container" id="cv-template">
+            <div class="row">
+            <div class="col-md-4 text-center py-5 background">
+
+
+    <img src="https://www.kindpng.com/picc/m/21-214439_free-high-quality-person-icon-default-profile-picture.png"
+    alt=""
+    class="img-fluid myimg"
+    />
+
+    <div class="container">
+        <p id="nameT1"> Yash kushwah</p>
+        <p id="contactT">  +914568544552,+91548625632</p>
+        <p id="addressT">  1645323231321321 sector 35 , INDIA</p>
+
+        <hr />
+
+        <p>
+            <a id="fbT" href="#1">https://www.facebook.com/Yashkushwah</a>
+        </p>
+
+        <p>
+            <a id="instaT" href="#1">https://www.linkdin.com/Yashkushwah</a>
+        </p>
+
+        <p>
+            <a id="linkedT" href="#1">https://www.instagram.com/Yashkushwah</a>
+        </p>
+
+    </div>
+
+</div>    
+<div class="col-md-8 py-5">
+
+    <h1 id="nameT2" class="text-center" style="font-weight: 980;">
+        Yash kushwah
+    </h1>
+
+<div class="card">
+    <div class="card-header background">
+        <h3>Objective</h3>
+    </div>
+    <div class="card-body">
+        <p id="objectiveT">
+            
+
+            Seeking a position in a dynamic organization where I can launch my career and work towards building a strong skill set. A hard working individual looking for a challenging position where I can showcase my skills and contribute to the growth of the organization
+
+
+
+
+        </p>
+    </div>
+
+    <div class="card mt-4">
+        <div class="card-header background">
+            <h3>Work Experience</h3>
+        </div>
+        <div class="card-body">
+            <ul id="weT">
+                <li>
+                    Seeking a position in a dynamic organization 
+                </li>
+                <li>
+                    Seeking a position in a dynamic organization 
+                </li>
+                <li>
+                    Seeking a position in a dynamic organization 
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card mt-4">
+        <div class="card-header background">
+            <h3>Academic Qualification</h3>
+        </div>
+        <div class="card-body">
+            <ul id="aqT">
+                <li>
+                    Seeking a position in a dynamic organization 
+                </li>
+                <li>
+                    Seeking a position in a dynamic organization 
+                </li>
+                <li>
+                    Seeking a position in a dynamic organization 
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contain mt-3 text-center">
+        <button onclick="printCV()" class="btn btn-primary btn-sm"> Print cv</button>
+    </div>
+
+</div>
+
+
+
+</div>
+</div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+        <script src="script.js"></script>
+
+
+    </body>
+</html>
